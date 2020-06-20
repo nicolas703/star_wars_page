@@ -1,15 +1,30 @@
-import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import "../../styles/home.scss";
+import CardsPlanets from "./cards_planets";
+import Cards from "./cards_characters";
 
-export const Home = () => (
-	<div className="text-center mt-5">
-		<h1>Hello Rigo!</h1>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<a href="#" className="btn btn-success">
-			If you see this green button, bootstrap is working
-		</a>
-	</div>
-);
+export const Home = () => {
+	return (
+		<>
+			<Link to="/characters">
+				<span className="mb-0 h1 nombre">Characters</span>
+			</Link>
+			<div className="container vitrina">
+				<div className="card-deck scroloso">
+					<Cards />
+				</div>
+			</div>
+
+			<Link to="/planets">
+				<span className="mb-0 h1 nombre">Planets</span>
+			</Link>
+			<div className="container vitrina">
+				<div className="card-deck scroloso">
+					<CardsPlanets />
+				</div>
+				<br />
+			</div>
+		</>
+	);
+};

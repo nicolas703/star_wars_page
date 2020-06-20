@@ -3,19 +3,19 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const Single = props => {
+export const SinglePlanets = props => {
 	const { store, actions } = useContext(Context);
 	return (
 		<div className="container">
 			<div className="display-4">
-				{!!store.characters && (
+				{!!store.planets && (
 					<>
 						<div className="container">
 							<div className="psup">
 								<img src="https://placehold.it/800x600" alt="img 800x600" className="imgSingle" />
 								<div>
 									<h1 className="tittleSingle">
-										{store.characters.results[props.match.params.theid].name}
+										{store.planets.results[props.match.params.theid].name}
 									</h1>
 									<p className="descrip">
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et feugiat
@@ -33,25 +33,23 @@ export const Single = props => {
 										<thead>
 											<tr>
 												<th scope="col">Name </th>
-												<th scope="col">Birth Year </th>
-												<th scope="col">Gender </th>
-												<th scope="col">Height </th>
-												<th scope="col">Skin Color </th>
-												<th scope="col">Eye Color</th>
+												<th scope="col">Climate </th>
+												<th scope="col">Diameter </th>
+												<th scope="col">Gravity </th>
+												<th scope="col">Orbital Period </th>
+												<th scope="col">Population</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<td>{store.characters.results[props.match.params.theid].name}</td>
+												<td>{store.planets.results[props.match.params.theid].name}</td>
+												<td>{store.planets.results[props.match.params.theid].climate} </td>
+												<td>{store.planets.results[props.match.params.theid].diameter}</td>
+												<td>{store.planets.results[props.match.params.theid].gravity}</td>
 												<td>
-													{store.characters.results[props.match.params.theid].birth_year}{" "}
+													{store.planets.results[props.match.params.theid].orbital_period}{" "}
 												</td>
-												<td>{store.characters.results[props.match.params.theid].gender}</td>
-												<td>{store.characters.results[props.match.params.theid].height}</td>
-												<td>
-													{store.characters.results[props.match.params.theid].skin_color}{" "}
-												</td>
-												<td>{store.characters.results[props.match.params.theid].eye_color}</td>
+												<td>{store.planets.results[props.match.params.theid].population}</td>
 											</tr>
 										</tbody>
 									</table>
@@ -73,6 +71,6 @@ export const Single = props => {
 	);
 };
 
-Single.propTypes = {
+SinglePlanets.propTypes = {
 	match: PropTypes.object
 };
