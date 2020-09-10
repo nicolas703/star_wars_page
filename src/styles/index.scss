@@ -11,13 +11,12 @@
     overflow-x: auto;
     width: 1000px;
     padding: 10px;
-    white-space: nowrap;
     margin-bottom: 20px;
     margin-top: 15px;
 }
 
 .scroloso{
-    display: block ruby;
+    display: table-cell;
 }
 
 .logo{
@@ -32,10 +31,10 @@
 
 .micard{
     
-    width: 270px;
+    min-width:225px;
     margin: 0 10px 10px 0;
     padding: 0;
-    display: inline-flex;
+    display: table-cell !important;
 }
 
 .nombre{

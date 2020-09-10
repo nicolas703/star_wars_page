@@ -13,7 +13,7 @@ export const Demo = () => {
 					return (
 						<div className="favs" key="i">
 							<h5 key="i">{item}</h5>
-							<button className="fas fa-trash-alt trash" onClick={() => actions.borrarFavs(id)} />
+							<button className="fas fa-trash-alt trash" onClick={item => actions.borrarFavs(item)} />
 							<br />
 						</div>
 					);

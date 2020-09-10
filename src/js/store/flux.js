@@ -69,6 +69,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ favs: newFavs });
 			},
 
+			borrarFavs: nombre => {
+				const store = getStore();
+
+				const newFavs = [...store.favs, nombre];
+				setStore({ favs: "" });
+			},
+
 			nextCharacters: () => {
 				const store = getStore();
 				if (store.count < 9) {
