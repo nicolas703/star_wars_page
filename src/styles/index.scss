@@ -6,7 +6,7 @@
 .vitrina{
     // background-color: black;
     height: 333px;
-    min-height: 333px;
+    min-height: 400px;
     overflow-y: hidden; 
     overflow-x: auto;
     width: 1000px;
@@ -36,7 +36,12 @@
     padding: 0;
     display: table-cell !important;
 }
-
+.micard2{
+    display:inline-flex;
+    min-width:225px;
+    margin: 0 10px 10px 0;
+    padding: 0;
+}
 .nombre{
     font-size: 50px;
     margin-left: 180px
@@ -104,7 +109,7 @@ font-size: xx-large;
 }
 
 .galery{
-    padding-left: 135px;
+    display: flexbox;
 }
 
 .psup{
@@ -118,4 +123,7 @@ font-size: xx-large;
 }
 .previous{
     margin-left: 21.3%;
+}
+.nose{
+    margin-left: 40px;
 }

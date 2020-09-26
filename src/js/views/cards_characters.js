@@ -13,7 +13,7 @@ const Cards = () => {
 					const nombre = item.name;
 					return (
 						<>
-							<div className="card micard" key="i">
+							<div className="card micard2" key="i">
 								<img src="https://placehold.it/300x150" className="card-img-top cardimg" alt="..." />
 								<div className="card-body">
 									<h5 className="card-title">{item.name}</h5>
@@ -27,7 +27,7 @@ const Cards = () => {
 									<Link to={"/single/" + index}>
 										<button className="btn btn-primary">Learn more</button>
 									</Link>
-
+									{/* <button><i class="fa fa-heart"/></button>*/}
 									<button
 										className="btn btn-secundary heart"
 										onClick={() => {
@@ -36,7 +36,6 @@ const Cards = () => {
 										}}>
 										<i className="far fa-heart" />
 									</button>
-									{/* <button><i class="fa fa-heart"/></button>*/}
 								</div>
 							</div>
 						</>

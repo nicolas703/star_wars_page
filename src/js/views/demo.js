@@ -8,19 +8,20 @@ export const Demo = () => {
 
 	return (
 		<div>
+			<button className="fas fa-trash-alt trash nose" onClick={item => actions.borrarFavs(item)} />
+
 			{!!store.favs &&
 				store.favs.map(item => {
 					return (
 						<div className="favs" key="i">
 							<h5 key="i">{item}</h5>
-							<button className="fas fa-trash-alt trash" onClick={item => actions.borrarFavs(item)} />
 							<br />
 						</div>
 					);
 				})}
 			<br />
 			<Link to="/">
-				<button className="btn btn-primary">Back home</button>
+				<button className="btn btn-primary nose">Back home</button>
 			</Link>
 		</div>
 	);

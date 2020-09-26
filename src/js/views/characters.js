@@ -9,6 +9,8 @@ const Characters = () => {
 		<>
 			<div className="container galery">
 				<Cards />
+			</div>
+			<div className="">
 				<button className="btn btn-outline-primary previous" onClick={e => actions.previousCharacters()}>
 					previous
 				</button>

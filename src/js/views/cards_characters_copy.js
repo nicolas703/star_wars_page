@@ -3,32 +3,31 @@ import "../../styles/home.scss";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-const CardsPlanets = () => {
+const Cards = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
 		<div className="container">
-			{!!store.planets &&
-				store.planets.results.map((item, index) => {
+			{!!store.characters &&
+				store.characters.results.map((item, index) => {
 					const nombre = item.name;
 					return (
 						<>
-							<div className="card micard2" key="i">
+							<div className="card micard" key="i">
 								<img src="https://placehold.it/300x150" className="card-img-top cardimg" alt="..." />
 								<div className="card-body">
 									<h5 className="card-title">{item.name}</h5>
 									<p className="card-text">
-										Population: {item.population}
+										Gender: {item.gender}
 										<br />
-										Terrain: {item.terrain}
+										Hair color: {item.hair_color}
+										<br />
+										Eye color: {item.eye_color}
 									</p>
-									<p className="card-text">
-										<small className="text-muted">Last updated 3 mins ago</small>
-									</p>
-									<Link to={"/singleplanets/" + index}>
+									<Link to={"/single/" + index}>
 										<button className="btn btn-primary">Learn more</button>
 									</Link>
-
+									{/* <button><i class="fa fa-heart"/></button>*/}
 									<button
 										className="btn btn-secundary heart"
 										onClick={() => {
@@ -37,7 +36,6 @@ const CardsPlanets = () => {
 										}}>
 										<i className="far fa-heart" />
 									</button>
-									{/* <button><i class="fa fa-heart"/></button>*/}
 								</div>
 							</div>
 						</>
@@ -46,4 +44,4 @@ const CardsPlanets = () => {
 		</div>
 	);
 };
-export default CardsPlanets;
+export default Cards;

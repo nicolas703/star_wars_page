@@ -13,7 +13,7 @@ const CardsPlanets = () => {
 					const nombre = item.name;
 					return (
 						<>
-							<div className="card micard2" key="i">
+							<div className="card micard" key="i">
 								<img src="https://placehold.it/300x150" className="card-img-top cardimg" alt="..." />
 								<div className="card-body">
 									<h5 className="card-title">{item.name}</h5>

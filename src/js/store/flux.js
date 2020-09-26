@@ -73,7 +73,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const store = getStore();
 
 				const newFavs = [...store.favs, nombre];
-				setStore({ favs: "" });
+				const borrado = newFavs.splice(1, 0, nombre);
+				setStore({ favs: borrado });
 			},
 
 			nextCharacters: () => {

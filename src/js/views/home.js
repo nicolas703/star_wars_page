@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/home.scss";
-import CardsPlanets from "./cards_planets";
-import Cards from "./cards_characters";
+import CardsPlanets from "./cards_planets_copy";
+import Cards from "./cards_characters_copy";
 
 export const Home = () => {
 	return (
